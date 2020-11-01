@@ -57,3 +57,9 @@ div.quiz-content {
 div.modal {
   display: none;
 }
+
+div.quiz p.next-question {
+  display: none;
+  margin: 0 13%;
+  text-align: right;
+}

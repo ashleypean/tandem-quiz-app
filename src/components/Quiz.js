@@ -2,7 +2,7 @@ import '../styles/Quiz.css'
 import QuizContent from './QuizContent.js'
 import Modal from './Modal.js'
 import FinalScore from './FinalScore.js'
-import React, { useState } from 'react'
+import React from 'react'
 
 
  export default function Quiz() {
@@ -53,6 +53,7 @@ import React, { useState } from 'react'
       </div>
         {/* fetched from server*/}
         <QuizContent />
+        <p className="next-question">Next &gt;</p>
         <FinalScore className="final-score"/>
     </div>
   )

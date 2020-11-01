@@ -1,1 +1,18 @@
+div.quiz-content h3.question {
+  margin: 5% 0 5% 0;
+}
+
+div.answer-choice {
+  display: flex;
+  margin: 0 0 7%;
+}
+
+div.answer-choice h3, div.answer-choice p {
+  margin: 0;
+  text-align: left;
+}
+
+div.answer-choice h3 {
+  margin: 0 5% 0; 
+}
 
