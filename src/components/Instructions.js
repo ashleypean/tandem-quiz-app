@@ -3,6 +3,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Nav from './Navbar'
 import Footer from './Footer'
+import AKey from '../img/a-key.png'
+import BKey from '../img/b-key.png'
+import CKey from '../img/c-key.png'
+import DKey from '../img/d-key.png'
 
 export default function Instructions(props) {
   const buttonStyling = {
@@ -26,14 +30,12 @@ export default function Instructions(props) {
         <h4>Keyboard</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur praesentium, distinctio non sed corrupti vel. Fuga vitae aut, esse quam eius est dicta deserunt suscipit illo corrupti voluptatibus error qui.</p>
         <div className="keyboard">
-          <img src="" alt=""/>
-          <img src="" alt=""/>
-          <img src="" alt=""/>
-          <img src="" alt=""/>
+          <img src={AKey} alt="Keyboard letter A"/>
+          <img src={BKey} alt="Keyboard letter B"/>
+          <img src={CKey} alt="Keyboard letter C"/>
+          <img src={DKey} alt="Keyboard letter D"/>
         </div>
       </div>
-        
-      <Footer />
     </div>
   )
 }

@@ -1,9 +1,27 @@
 div.instructions {
-  height: 100%; 
-  width: 100%;
+  background:  #bbbfca ;
+  box-shadow: 5px 5px 15px 5px #000000;
+  border-radius: 24px;
+  margin: 0% 5% 0 5%;
+  height: 80%;
+  width: 90%;
 }
 
 div.how-to-play {
   height: 90%;
-  border: 1px solid red;
+  padding: 5%;
 }
+
+div.how-to-play p {
+  color: black;
+}
+
+div.keyboard {
+  text-align: center;
+}
+
+div.keyboard img {
+  height: 5rem;
+  width: auto;
+}
+

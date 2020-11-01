@@ -4,9 +4,9 @@ import React, { useState, useEffect } from 'react'
 
 
 export default function Quiz(props) {
-  const [currentQuestion, updateCurrentQuestion] = useState(0)
-  const [currentScore, updateScore] = useState(0)
-  const [scoreView, changeScoreView] = useState(true)
+  //const [currentQuestion, updateCurrentQuestion] = useState(0)
+  //const [currentScore, updateScore] = useState(0)
+  //const [scoreView, changeScoreView] = useState(true)
   
   const confirmLeave = (e) => {
 

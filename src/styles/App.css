@@ -14,6 +14,6 @@ div.App {
 }
 
 /* Set uniform color for all text in div.app*/
-div.App a, div.App a:visited, div.App h1, div.App h3, div.App h4, div.App h5,div.App h6, div.App p {
+div.App a, div.App a:visited, div.App h1, div.App h3, div.App h4, div.App h5,div.App h6, div.App p, div.App span {
   color: #090979;
 }
