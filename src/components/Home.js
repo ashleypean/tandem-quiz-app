@@ -1,7 +1,6 @@
 import '../styles/Home.css'
 import React from 'react'
 import Nav from './Navbar'
-import Footer from './Footer'
 
 export default function Home() {
 
@@ -9,7 +8,6 @@ export default function Home() {
     <div className="home">
         <Nav />
         <h1>QUIZZLY</h1>
-        <Footer />
     </div>
   )
 }

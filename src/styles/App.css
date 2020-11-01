@@ -6,8 +6,14 @@ html, body, div.App  {
 }
 
 div.App {
-  background-color: rgb(80, 85, 85);
-  color: #090979;
+  background-color: #090979;
   font-family: 'Turret Road', cursive;
-  background:  #bbbfca ;
+  padding: 5%;
+  height: 95%;
+  width: 95%;
+}
+
+/* Set uniform color for all text in div.app*/
+div.App a, div.App a:visited, div.App h1, div.App h3, div.App h4, div.App h5,div.App h6, div.App p {
+  color: #090979;
 }

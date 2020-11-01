@@ -1,25 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import '../styles/Navbar.css'
 
 export default function Navbar() {
   return (
     <nav>
-        <Link className="nav-link">
+        <NavLink exact to="/"className="nav-link" activeClassName="selected-nav-item">
           Home
-        </Link>
-        <Link to="/instructions" className="nav-link">
+        </NavLink>
+        <NavLink to="/instructions" className="nav-link" activeClassName="selected-nav-item">
           How to Play
-        </Link>
-        <Link to="/quizzes/create">
-          Create a Quiz
-        </Link>
-        <Link to="/quizzes/take">
+        </NavLink>
+        <NavLink to="/take" activeClassName="selected-nav-item">
           Take a Quiz
-        </Link>
-        <Link to="/upcoming-features" className="nav-link">
-          Upcoming Features
-        </Link>
+        </NavLink>
       </nav>
   )
 }

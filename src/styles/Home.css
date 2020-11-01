@@ -1,9 +1,11 @@
 
 div.home {
-  margin: 0;
-  height: 100%; 
-  width: 100%;
-  padding: 0;
+  background:  #bbbfca ;
+  box-shadow: 5px 5px 15px 5px #000000;
+  border-radius: 24px;
+  margin: 0% 5% 0 5%;
+  height: 80%;
+  width: 90%;
 }
 
 div.home h1 {

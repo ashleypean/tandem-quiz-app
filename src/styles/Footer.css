@@ -2,9 +2,13 @@ footer {
   position: absolute; 
   bottom: 0;
   text-align: center;
-  background-color: inherit;
+  background-color: none;
   height: 5%;
-  width: 100%;
-  background-color: #bbbfca;
-  color: #1F0B79;
+  width: 90%;
+  margin: 0 5%;
+  color: #BBBFCA;
+}
+
+footer a, footer a:visited, footer a:hover {
+  color: #BBBFCA;
 }

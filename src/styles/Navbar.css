@@ -1,5 +1,22 @@
 nav {
-  height: 5%;
+  height: 7%;
   display: flex;
   justify-content: space-around;
+  align-items: flex-end;
+}
+
+nav a , nav a:visited{
+  text-decoration: none;
+}
+
+nav a:hover {
+  font-weight: 800;
+}
+
+nav .selected-nav-item {
+  text-decoration: underline overline;
+}
+
+nav .selected-nav-item:hover {
+  font-weight: normal;
 }
