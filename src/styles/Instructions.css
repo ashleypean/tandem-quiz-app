@@ -1,0 +1,9 @@
+div.instructions {
+  height: 100%; 
+  width: 100%;
+}
+
+div.how-to-play {
+  height: 90%;
+  border: 1px solid red;
+}
