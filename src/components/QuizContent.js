@@ -3,49 +3,84 @@ import '../styles/QuizContent.css'
 import { useEffect, useState } from 'react'
 
 export default function QuizContent() {
-  const [questionList, setQuestionList] = useState([])
-  const [currentQuestion, setCurrentQuestion] = useState(questionList[0])
+  const [questionList, setQuestionList] = useState([{
+    "question": null,
+    "incorrect": [],
+    "correct": null
+  }])
+  const [currentQuestion, setCurrentQuestion] = useState({
+    "question": null,
+    "incorrect": [],
+    "correct": null
+  })
+  const [currentPrompt, setCurrentPrompt] = useState('')
+  const [currentAnswers, setCurrentAnswers] = useState(['nothing'])
 
   useEffect(() => {
-    async function fetchQuestion() {
-      const res = 
-      await (await fetch("../server/server.js")).json()
-      .then(res => setQuestionList(res))
+    const data = async () => {
+      await fetch('http://localhost:4000/take')              
+      .then(res => res.json())
+      .then(data => {
+        setQuestionList(data)
+        setCurrentQuestion(data[0])
+        setCurrentPrompt(data[0].question)
+        setCurrentAnswers(randomizeQuestionOrder(data))
+      })
+      .then(console.log(currentAnswers, 'current answers'))
       .catch(err => console.log(err))
     }
-
+    data()
   }, [])
 
+  const getRandomNum = () => {
+    return Math.floor(Math.random() * 4) + 1
+  }
+
+  const randomizeQuestionOrder = (data) => {
+    const answers = data[0].incorrect
+    const correctAnswer = data[0].correct
+    console.log(answers, 'incorrect')
+    console.log(correctAnswer, 'correct')
+    const num = getRandomNum()
+    answers.splice(num, 0, correctAnswer)
+    console.log(answers, 'answers')
+    return answers
+  }
+
+  const choiceD = (
+  <div className="answer-choice">
+    <h3>D</h3>
+    <p className="answer-choice-d">
+      {currentAnswers[3]}
+    </p>
+  </div>
+  )
   return (
     <div className="quiz-content">
       <h3 className="question">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur atque impedit accusantium! Reiciendis ipsa culpa necessitatibus eaque nostrum quia, amet recusandae dolorum illo! Corporis, doloremque neque! Quisquam, dolore repudiandae?
+        {currentPrompt}
       </h3>
       <div className="answers">
         <div className="answer-choice">
           <h3>A</h3>
           <p className="answer-choice-a">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet 
+            {currentAnswers[0]}
           </p>
         </div>
         <div className="answer-choice">
           <h3>B</h3>
           <p className="answer-choice-b">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet 
+          {currentAnswers[1]}
           </p>
         </div>
         <div className="answer-choice">
           <h3>C</h3>
           <p className="answer-choice-c">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet 
+          {currentAnswers[2]}
           </p>
         </div>
-        <div className="answer-choice">
-          <h3>D</h3>
-          <p className="answer-choice-d">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet 
-          </p>
-        </div>
+          {currentAnswers[3]? (choiceD): null}
+        
       </div>
     </div>
   )

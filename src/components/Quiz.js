@@ -3,12 +3,11 @@ import QuizContent from './QuizContent.js'
 import Modal from './Modal.js'
 import FinalScore from './FinalScore.js'
 import React from 'react'
+import { useState } from 'react'
 
 
  export default function Quiz() {
-  // const [currentQuestion, updateCurrentQuestion] = useState(0)
-  // const [currentScore, updateScore] = useState(0)
-  //const [scoreView, setScoreView] = useState('visible')
+  const [scoreView, setScoreView] = useState('visible')
   //const [isOpen, setIsOpen] = useState(false)
   
   const confirmLeave = e => {

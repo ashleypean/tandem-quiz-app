@@ -2,7 +2,9 @@ const express = require('express')
 const quiz = require('./questions.json')
 
 const app = express()
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 4000
+
+const cors = require('cors')
 
 const getQuestions = (quiz) => {
   const list = []
@@ -14,9 +16,6 @@ const getQuestions = (quiz) => {
       list.push(quiz[num])
       numList.push(num)
     }
-      
-
-  console.log('list length is: ' + list.length)
   }
   return list
 }
@@ -29,8 +28,8 @@ app.get('/instructions', (req, res) => {
   res.send('on instructions page')
 })
 
-app.get('/take', (req, res) => {
-  res.send(getQuestions(quiz))
+app.get('/take', cors(), (req, res) => {
+  res.status(200).send(getQuestions(quiz))
 })
 
 app.listen(PORT, () => {
