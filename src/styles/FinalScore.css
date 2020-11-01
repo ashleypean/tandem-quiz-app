@@ -1,0 +1,37 @@
+div.final-score {
+  background:  #bbbfca ;
+  box-shadow: 5px 5px 15px 5px #000000;
+  border-radius: 24px;
+  margin: 0% 5% 0 5%;
+  padding: 5%;
+  height: 65%;
+  width: 80%;
+  display: none;
+}
+
+div.final-score a.exit {
+  width: 100%;
+  text-align: right;
+}
+
+div.final-score h1 {
+  font-size: 700%;
+  text-align: center;
+}
+
+div.final-score h4 {
+  font-size: 200%;
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+div.final-score a.go-home {
+  display: flex;
+  justify-content: center;
+}
+
+div.final-score .link:hover {
+  text-decoration: underline overline;
+}
+

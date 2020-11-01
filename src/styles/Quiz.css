@@ -18,7 +18,7 @@ div.quiz nav p {
   margin: 0;
 }
 
-div.quiz h1 {
+div.quiz h1.score {
   text-align: center;
   font-size: 3rem;
   margin: 1% 0 0 0;
@@ -38,16 +38,22 @@ div.quiz-details {
   display: flex;
   justify-content: space-between;
   align-content: end;
-  margin: 0 12%;
+  margin: 0 14%;
 }
 
 div.quiz-details p {
   margin: 0;
+  font-weight: 700;
 }
 
 div.quiz-content {
   border: 1px solid #090979;
   border-radius: 12px;
-  height: 24rem;
+  height: 70%;
   margin: .5% 10%;
+  padding: 0 5%;
+}
+
+div.modal {
+  display: none;
 }

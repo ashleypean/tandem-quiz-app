@@ -1,12 +1,15 @@
 import '../styles/Quiz.css'
 import QuizContent from './QuizContent.js'
-import React, { useState, useEffect } from 'react'
+import Modal from './Modal.js'
+import FinalScore from './FinalScore.js'
+import React, { useState } from 'react'
 
 
-export default function Quiz(props) {
-  //const [currentQuestion, updateCurrentQuestion] = useState(0)
-  //const [currentScore, updateScore] = useState(0)
-  //const [scoreView, changeScoreView] = useState(true)
+ export default function Quiz() {
+  // const [currentQuestion, updateCurrentQuestion] = useState(0)
+  // const [currentScore, updateScore] = useState(0)
+  //const [scoreView, setScoreView] = useState('visible')
+  //const [isOpen, setIsOpen] = useState(false)
   
   const confirmLeave = e => {
     e.preventDefault()
@@ -16,6 +19,15 @@ export default function Quiz(props) {
     else 
       return null
   }
+
+  const toggleScore = e => {
+  //   const score = document.querySelector('h1.score')
+  //   const isVisible = document.querySelector.style.visibility 
+  //   console.log(score, isVisible)
+  //   const newVisibility = isVisible === 'visible'? 'hidden': 'visisble' 
+  //   setScoreView(newVisibility)
+  }
+
 
   const openModal = e => {
     console.log('modal')
@@ -30,18 +42,18 @@ export default function Quiz(props) {
 
       <div className="score">
         <h1 className="score">Score: 7</h1>
-        <p className="hide-score link">Hide Score</p>
+        <p className="hide-score link" onClick={toggleScore}>Hide Score</p>
       </div>
- 
+
+      <Modal className="modal"/>
 
       <div className="quiz-details">
         <p className="round">Round 1/1</p>
         <p className="questions">Question 9/10</p>
       </div>
-      <div className="quiz-content">
-          {/* fetched from server*/}
-      </div>
-      
+        {/* fetched from server*/}
+        <QuizContent />
+        <FinalScore className="final-score"/>
     </div>
   )
 }

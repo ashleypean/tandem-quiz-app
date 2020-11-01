@@ -8,8 +8,6 @@ import DKey from '../img/d-key.png'
 import TabKey from '../img/tab-key.png'
 
 export default function Instructions(props) {
-
-  const { quizSelected } = props
   
   return (
     <div className="instructions">
