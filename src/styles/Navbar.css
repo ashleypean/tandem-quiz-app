@@ -10,7 +10,7 @@ nav a , nav a:visited{
 }
 
 nav a:hover {
-  font-weight: 800;
+  text-decoration: underline overline;
 }
 
 nav .selected-nav-item {
@@ -19,4 +19,5 @@ nav .selected-nav-item {
 
 nav .selected-nav-item:hover {
   font-weight: normal;
+  cursor: default;
 }

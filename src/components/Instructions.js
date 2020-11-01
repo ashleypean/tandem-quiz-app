@@ -1,23 +1,14 @@
 import '../styles/Instructions.css'
 import React from 'react'
-import { Link } from 'react-router-dom'
 import Nav from './Navbar'
-import Footer from './Footer'
 import AKey from '../img/a-key.png'
 import BKey from '../img/b-key.png'
 import CKey from '../img/c-key.png'
 import DKey from '../img/d-key.png'
+import TabKey from '../img/tab-key.png'
 
 export default function Instructions(props) {
-  const buttonStyling = {
-    color: 'white',
-    backgroundColor: 'gray', 
-    width: '7rem',  
-    padding: '.5rem 1rem',
-    margin: '0 auto', 
-    borderRadius: '8px', 
-    textDecoration: 'none'
-  }
+
   const { quizSelected } = props
   
   return (
@@ -34,6 +25,8 @@ export default function Instructions(props) {
           <img src={BKey} alt="Keyboard letter B"/>
           <img src={CKey} alt="Keyboard letter C"/>
           <img src={DKey} alt="Keyboard letter D"/>
+          <p>OR</p>
+          <img src={TabKey} alt="Keyboard key Tab"/>
         </div>
       </div>
     </div>
