@@ -10,8 +10,9 @@ div.quiz {
 
 div.quiz nav {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 0 15%;
 }
 
 div.quiz nav p {
