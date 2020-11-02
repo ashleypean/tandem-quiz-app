@@ -9,6 +9,7 @@ export default function QuizDetails() {
   const [score, setScore] = useState(0)
   const [round, setRound] = useState(1)
   const [userSelection, setUserSelection] = useState(null)
+  const [correctAnswer, setCorrectAnswer] = useState(null)
 
   const handleClick = e => {
     //Handle user input if a question has not been selected
@@ -19,8 +20,13 @@ export default function QuizDetails() {
       if(next) {
         setQuestionNumber(prev => prev + 1)
       }
-
-    } 
+    } else {
+        //Validate user's answer choice, and increment score if answer is correct  
+        console.log(userSelection, correctAnswer)
+        userSelection === correctAnswer ? setScore(prev => prev + 1): setScore(prev => prev)
+        setQuestionNumber(prev => prev + 1)
+    }
+        
   }
 
   return (
@@ -35,10 +41,10 @@ export default function QuizDetails() {
       </div>
 
       {/* fetched from JSON file*/}
-      <QuizContent questionNumber={questionNumber} userSelection={userSelection} setUserSelection={setUserSelection}/>
+      <QuizContent questionNumber={questionNumber} setUserSelection={setUserSelection} setCorrectAnswer={setCorrectAnswer}/>
 
       <div className="button">
-        <button className="next-question" onClick={handleClick}>Next &gt;</button>
+        <button className="next-question" onClick={handleClick}>Next</button>
       </div>
       
       

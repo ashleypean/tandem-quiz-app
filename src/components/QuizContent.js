@@ -21,13 +21,45 @@ export default function QuizContent(props) {
   //FIX THIS LATER, for now it works ¯\_(ツ)_/¯
   useEffect(() => {
     setQuestionList(randomizeAnswers(data))
+    
+  }, [])
+
+  //Used to get correct answer the first time the component is loaded
+  useEffect(() => {
 
   }, [])
+
+  //Used to store string value a,b,c,d of correct answer 
+  useEffect(() => {
+    const alpha = ['A', 'B', 'C', 'D']
+    //index of current question in question list 
+    const i = props.questionNumber - 1
+    //Grab current answers
+    const answersArr = questionList[i].answers
+    //Grab correct answer string
+    const correctAnswerStr = questionList[i].correct
+    const correctIndex = answersArr.indexOf(correctAnswerStr)
+    console.log(i, correctIndex, questionList[i])
+
+    setCorrectAnswer(alpha[correctIndex])
+  }, [props.questionNumber, questionList])
+
+  //Remove question highlight when new question pops up
+  //Remove userSelection when new question pops us
+  useEffect(() => {
+    setUserSelection()
+
+    if(document.querySelector(`div .selected-style`)) {
+      document.querySelector(`div .selected-style`).classList.remove('selected-style')
+    }
+  }, [props.questionNumber])
 
   //PROPS
   const index = props.questionNumber - 1
   const setUserSelection = props.setUserSelection
-  const userSelection = props.userSelection
+  const setCorrectAnswer = props.setCorrectAnswer
+
+
 
   //Add background color to show what last selection is when user picks an answer
   const handleClick = e => {
@@ -40,7 +72,7 @@ export default function QuizContent(props) {
 
     //Select new answer choice
     setUserSelection(id)
-    //Add styling
+    //Add styling to new answer choice
     document.querySelector(`div #${id}`).classList.add('selected-style')
   }
 
