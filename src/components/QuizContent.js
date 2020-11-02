@@ -1,10 +1,8 @@
 import React from 'react'
 import '../styles/QuizContent.css'
-import FinalScore from './FinalScore.js'
 import { useEffect, useState } from 'react'
 
 //Utilities 
-
 import randomizeAnswers from '../utils/randomize-answers.js'
 
 //Import JSON data
@@ -19,9 +17,9 @@ export default function QuizContent(props) {
     answers: ['...', '...', '...', '...']
   }])
 
-    //IIFE that will fetch 10 random questions and add an answer list to it
-    //Value get saved as question list for quiz
-    //FIX THIS LATER, for now it works ¯\_(ツ)_/¯
+  //IIFE that will fetch 10 random questions and add an answer list to it
+  //Value get saved as question list for quiz
+  //FIX THIS LATER, for now it works ¯\_(ツ)_/¯
   useEffect(() => {
     setQuestionList(randomizeAnswers(data))
 
@@ -39,8 +37,6 @@ export default function QuizContent(props) {
     )
   })
 
-
-
   return (
     <div className="quiz-content">
       <h3 className="question">
@@ -48,10 +44,7 @@ export default function QuizContent(props) {
       </h3>
       <div className="answers">
         {displayQuestions}
-    </div>
-
-      <button className="next-question">Next &gt;</button>
-        <FinalScore className="final-score"/>
+      </div>
     </div>
   )
 }

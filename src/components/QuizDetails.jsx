@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import "../styles/QuizDetails.css"
 import QuizContent from './QuizContent.js'
+import FinalScore from './FinalScore.js'
 
 export default function QuizDetails() {
   const [questionNumber, setQuestionNumber] = useState('1')
@@ -22,6 +23,10 @@ export default function QuizDetails() {
 
       {/* fetched from server*/}
       <QuizContent questionNumber={questionNumber}/>
+
+      <button className="next-question">Next &gt;</button>
+      
+      <FinalScore className="final-score"/>
     </div>
   )
 }
