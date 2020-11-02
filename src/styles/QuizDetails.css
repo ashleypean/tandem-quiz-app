@@ -1,0 +1,21 @@
+div.quiz-details-wrapper {
+  margin: 0 5%;
+}
+
+div.quiz-details-wrapper h1.score {
+  text-align: center;
+  font-size: 3rem;
+  margin: 1% 0 5%;
+}
+
+div.quiz-details {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-end;
+  margin: 0 14%;
+}
+
+div.quiz-details p {
+  margin: 0;
+  font-weight: 700;
+}
