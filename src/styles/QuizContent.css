@@ -4,7 +4,7 @@ div.quiz-content h3.question {
 
 div.answer-choice {
   display: flex;
-  margin: 0 0 7%;
+  margin: 0 0 2%;
 }
 
 div.answer-choice h3, div.answer-choice p {

@@ -1,5 +1,4 @@
 import '../styles/QuizWrapper.css'
-import QuizContent from './QuizContent.js'
 import Modal from './Modal.js'
 import React from 'react'
 import QuizDetails from './QuizDetails'

@@ -15,6 +15,8 @@ const getTenQuestions = (quiz) => {
       numList.push(num)
     }
   }
+
+  return list
 }
 
 export default getTenQuestions
