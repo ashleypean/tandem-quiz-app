@@ -3,7 +3,6 @@ import Home from './Home.js'
 import Instructions from './Instructions.js'
 import NotFound from './404NotFound.js'
 import Quiz from './QuizWrapper.js'
-import FinalScore from './FinalScore.js'
 import { BrowserRouter as Router, Switch , Route, Redirect } from 'react-router-dom'
 
 export default function App() {
@@ -15,7 +14,6 @@ export default function App() {
           <Route  exact path="/" render={Home} />
           <Redirect from="/home" to="/"/>
           <Route  exact path="/instructions" render={Instructions} />
-          <Route exact path="/score" render={FinalScore} />
           <Route exact path="/quiz" render={Quiz} />
           {/*<Route path="*" render={NotFound}/>*/}
         </Switch>  

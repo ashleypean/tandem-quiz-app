@@ -29,26 +29,34 @@ export default function QuizDetails() {
         
   }
 
-  return (
-    <div className="quiz-details-wrapper">
-      <div className="score">
-        <h1 className="score">Score: {score}</h1>
-      </div>
+    const quiz = (
+      <div className="quiz-details-wrapper">
+        <div className="score">
+          <h1 className="score">Score: {score}</h1>
+        </div>
 
-      <div className="quiz-details">
-        <p className="round">Round {round}/1</p>
-        <p className="questions">Question {questionNumber}/10</p>
-      </div>
+        <div className="quiz-details">
+          <p className="round">Round {round}/1</p>
+          <p className="questions">Question {questionNumber}/10</p>
+        </div>
 
-      {/* fetched from JSON file*/}
-      <QuizContent questionNumber={questionNumber} setUserSelection={setUserSelection} setCorrectAnswer={setCorrectAnswer}/>
+        {/* fetched from JSON file*/}
+        <QuizContent questionNumber={questionNumber} setUserSelection={setUserSelection} setCorrectAnswer={setCorrectAnswer}/>
 
-      <div className="button">
-        <button className="next-question" onClick={handleClick}>Next</button>
-      </div>
-      
-      
-      <FinalScore className="final-score"/>
+        <div className="button">
+          <button className="next-question" onClick={handleClick}>Next</button>
+        </div>  
     </div>
+    )
+
+    const finalScore = (
+      <FinalScore className="final-score" score={score}/>
+    )
+
+  return (
+    <div>
+      {questionNumber <= 10? quiz: finalScore}
+    </div>
+
   )
 }
