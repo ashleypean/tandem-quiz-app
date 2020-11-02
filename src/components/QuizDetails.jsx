@@ -10,10 +10,6 @@ export default function QuizDetails() {
   const [round, setRound] = useState(1)
   const [userSelection, setUserSelection] = useState(null)
 
-  useEffect(() => {
-    console.log(questionNumber)
-  }, [questionNumber])
-
   const handleClick = e => {
     //Handle user input if a question has not been selected
     if(!userSelection) {
@@ -25,7 +21,6 @@ export default function QuizDetails() {
       }
 
     } 
-    
   }
 
   return (
@@ -40,7 +35,7 @@ export default function QuizDetails() {
       </div>
 
       {/* fetched from JSON file*/}
-      <QuizContent questionNumber={questionNumber}/>
+      <QuizContent questionNumber={questionNumber} userSelection={userSelection} setUserSelection={setUserSelection}/>
 
       <div className="button">
         <button className="next-question" onClick={handleClick}>Next &gt;</button>

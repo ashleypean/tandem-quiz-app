@@ -16,3 +16,15 @@ div.answer-choice h3 {
   margin: 0 5% 0; 
 }
 
+div.answer-choice:hover {
+  background-color: #564f71;
+  color: white;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+div.selected-style {
+  background-color: #564f71;
+}
+
+
