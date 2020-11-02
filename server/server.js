@@ -11,7 +11,7 @@ const getQuestions = (quiz) => {
   const numList = []
 
   while(list.length !== 10) {
-    const num = Math.floor(Math.random() * quiz.length+1)
+    const num = Math.floor(Math.random() * quiz.length)
     if(!numList.includes(num)) {
       list.push(quiz[num])
       numList.push(num)

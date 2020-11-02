@@ -21,12 +21,7 @@ div.quiz nav p {
 div.quiz h1.score {
   text-align: center;
   font-size: 3rem;
-  margin: 1% 0 0 0;
-}
-
-div.quiz p {
-  text-align: center;
-  margin: 0 0 3% 0; 
+  margin: 1% 0 5%;
 }
 
 div.quiz .link {
@@ -37,7 +32,7 @@ div.quiz .link {
 div.quiz-details {
   display: flex;
   justify-content: space-between;
-  align-content: end;
+  align-content: flex-end;
   margin: 0 14%;
 }
 

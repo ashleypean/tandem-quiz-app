@@ -12,7 +12,7 @@ export default function Navbar() {
         <NavLink to="/instructions" className="nav-link" activeClassName="selected-nav-item">
           How to Play
         </NavLink>
-        <NavLink to="/take" activeClassName="selected-nav-item">
+        <NavLink to="/quiz" activeClassName="selected-nav-item">
           Take a Quiz
         </NavLink>
       </nav>
