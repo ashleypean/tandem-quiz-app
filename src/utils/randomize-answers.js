@@ -20,7 +20,7 @@ const randomizeAnswerOrder = (questions) => {
 
     //Insert the correct answer into the array at the random location
     answersList.splice(num, 0, correctAnswer)
-    console.log(answersList)
+
     //Attach new answers array to the object
     questions[i].answers = answersList
 }

@@ -5,7 +5,6 @@ import NotFound from './404NotFound.js'
 import Quiz from './QuizWrapper.js'
 import FinalScore from './FinalScore.js'
 import { BrowserRouter as Router, Switch , Route, Redirect } from 'react-router-dom'
-import { useState } from 'react'
 
 export default function App() {
 

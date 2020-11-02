@@ -9,6 +9,7 @@ import randomizeAnswers from '../utils/randomize-answers.js'
 const data = require('../questions.json')
 
 export default function QuizContent(props) {
+
   const [questionList, setQuestionList] = useState([{
     question: null,
     incorrect: [],
@@ -26,6 +27,7 @@ export default function QuizContent(props) {
   }, [])
 
   const index = props.questionNumber - 1
+
 
   const displayQuestions = questionList[index].answers.map((answer, i) => {
     const alpha = ['A', 'B', 'C', 'D']

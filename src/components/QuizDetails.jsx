@@ -1,14 +1,32 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "../styles/QuizDetails.css"
 import QuizContent from './QuizContent.js'
 import FinalScore from './FinalScore.js'
 
+
 export default function QuizDetails() {
-  const [questionNumber, setQuestionNumber] = useState('1')
+  const [questionNumber, setQuestionNumber] = useState(1)
   const [score, setScore] = useState(0)
   const [round, setRound] = useState(1)
+  const [userSelection, setUserSelection] = useState(null)
 
+  useEffect(() => {
+    console.log(questionNumber)
+  }, [questionNumber])
 
+  const handleClick = e => {
+    //Handle user input if a question has not been selected
+    if(!userSelection) {
+      const next = window.confirm('No answer selected. Are you sure you would like to continue?')
+
+      //If user confirms moving to next question, update question count
+      if(next) {
+        setQuestionNumber(prev => prev + 1)
+      }
+
+    } 
+    
+  }
 
   return (
     <div className="quiz-details-wrapper">
@@ -21,11 +39,11 @@ export default function QuizDetails() {
         <p className="questions">Question {questionNumber}/10</p>
       </div>
 
-      {/* fetched from server*/}
+      {/* fetched from JSON file*/}
       <QuizContent questionNumber={questionNumber}/>
 
       <div className="button">
-        <button className="next-question">Next &gt;</button>
+        <button className="next-question" onClick={handleClick}>Next &gt;</button>
       </div>
       
       
