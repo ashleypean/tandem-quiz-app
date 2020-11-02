@@ -17,8 +17,6 @@ div.answer-choice h3 {
 }
 
 div.answer-choice:hover {
-  background-color: #564f71;
-  color: white;
   cursor: pointer;
   font-weight: 800;
 }

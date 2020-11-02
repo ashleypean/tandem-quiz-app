@@ -39,7 +39,6 @@ export default function QuizContent(props) {
     //Grab correct answer string
     const correctAnswerStr = questionList[i].correct
     const correctIndex = answersArr.indexOf(correctAnswerStr)
-    console.log(i, correctIndex, questionList[i])
 
     setCorrectAnswer(alpha[correctIndex])
   }, [props.questionNumber, questionList])

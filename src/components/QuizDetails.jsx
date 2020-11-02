@@ -11,7 +11,24 @@ export default function QuizDetails() {
   const [userSelection, setUserSelection] = useState(null)
   const [correctAnswer, setCorrectAnswer] = useState(null)
 
+  //Function will show correct answer in green, incorrect in red 
+  const showCorrectAnswer = (correctAnswer, userSelection) => {
+    if(correctAnswer === userSelection) {
+      document.querySelector(`div#${correctAnswer}`).setAttribute('style', "background-color: #99ff99;")
+    }else {
+      document.querySelector(`div#${userSelection}`).setAttribute('style', "background-color: #ff8080")
+      document.querySelector(`div#${correctAnswer}`).setAttribute('style', "background-color: #99ff99;")
+    }
+
+    const all = document.querySelectorAll('div.answer-choice')
+    setTimeout(function revertColors() {
+      all.forEach(x => x.setAttribute('style', "background-color: initial"))
+    } , 3000)
+
+  }
+
   const handleClick = e => {
+    console.log(document.querySelectorAll('div.answer-choice'))
     //Handle user input if a question has not been selected
     if(!userSelection) {
       const next = window.confirm('No answer selected. Are you sure you would like to continue?')
@@ -23,8 +40,14 @@ export default function QuizDetails() {
     } else {
         //Validate user's answer choice, and increment score if answer is correct  
         console.log(userSelection, correctAnswer)
-        userSelection === correctAnswer ? setScore(prev => prev + 1): setScore(prev => prev)
-        setQuestionNumber(prev => prev + 1)
+        if(userSelection === correctAnswer) {
+          showCorrectAnswer(correctAnswer, userSelection)
+          setScore(prev => prev + 1)
+        }else {
+          showCorrectAnswer(correctAnswer, userSelection)
+          setScore(prev => prev)
+        } 
+        setTimeout(() => (setQuestionNumber(prev => prev + 1)), 3010)
     }
         
   }
