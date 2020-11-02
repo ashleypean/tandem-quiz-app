@@ -24,7 +24,10 @@ export default function QuizDetails() {
       {/* fetched from server*/}
       <QuizContent questionNumber={questionNumber}/>
 
-      <button className="next-question">Next &gt;</button>
+      <div className="button">
+        <button className="next-question">Next &gt;</button>
+      </div>
+      
       
       <FinalScore className="final-score"/>
     </div>
