@@ -56,7 +56,7 @@ button.next-question:active, button.next-question:hover {
     overflow: hidden;
   }
   div.quiz-details-wrapper h1.score {
-    margin: 4% 0;
+    margin: 1% 0;
   }
 
   div.button {
