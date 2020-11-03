@@ -3,7 +3,6 @@ import Home from './Home.js'
 import Instructions from './Instructions.js'
 import NotFound from './404NotFound.js'
 import Quiz from './QuizWrapper.js'
-import Footer from './Footer.js'
 import { BrowserRouter as Router, Switch , Route, Redirect } from 'react-router-dom'
 
 export default function App() {
@@ -19,7 +18,7 @@ export default function App() {
           {/*<Route path="*" render={NotFound}/>*/}
         </Switch>  
       </Router>
-      <Footer />
+
     </div>
   )
 }

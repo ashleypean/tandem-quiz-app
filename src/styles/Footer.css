@@ -1,15 +1,14 @@
 footer {
-  position: fixed; 
+  position: absolute; 
   bottom: 0;
-  width: 100%;
   text-align: center;
-  color: black;
+  background-color: none;
+  height: 5%;
+  width: 90%;
+  margin: 0 5%;
+  color: #BBBFCA;
 }
 
-div.App footer p, div.App footer a {
-  color: black;
-}
-
-footer a, footer a:visited, footer a:hover, footer p a{
-  color: black;
+footer a, footer a:visited, footer a:hover {
+  color: #BBBFCA;
 }

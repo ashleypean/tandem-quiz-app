@@ -8,8 +8,9 @@ html, body, div.App  {
 div.App {
   background-color: #090979;
   font-family: 'Turret Road', cursive;
-  height: 100%;
-  width: 100%;
+  padding: 5%;
+  height: 95%;
+  width: 95%;
 }
 
 /* Set uniform color for all text in div.app*/
