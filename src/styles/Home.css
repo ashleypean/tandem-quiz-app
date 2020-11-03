@@ -3,9 +3,10 @@ div.home {
   background:  #bbbfca ;
   box-shadow: 5px 5px 15px 5px #000000;
   border-radius: 24px;
-  margin: 0% 5% 0 5%;
   height: 80%;
-  width: 90%;
+  width: 80%;
+  max-width: 1150px;
+  margin: 5% 0 0;
 }
 
 div.home h1 {
@@ -16,6 +17,11 @@ div.home h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1000%;
+  font-size: 300%;
 }
 
+@media screen and (min-width: 500px) {
+  div.home h1 {
+    font-size: 5rem;
+  }
+}
