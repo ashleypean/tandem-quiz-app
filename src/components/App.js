@@ -9,13 +9,13 @@ export default function App() {
 
   return (
     <div className="App">
-      <Router >
+      <Router>
         <Switch>
-          <Route  exact path="/" render={Home} />
-          <Redirect from="/home" to="/"/>
-          <Route  exact path="/instructions" render={Instructions} />
+          <Route exact path="/" render={Home} />
+          <Route exact path="/instructions" render={Instructions} />
           <Route exact path="/quiz" render={Quiz} />
-          {/*<Route path="*" render={NotFound}/>*/}
+          <Route path="/404" render={NotFound} />
+          <Redirect to="/404"/>
         </Switch>  
       </Router>
 
