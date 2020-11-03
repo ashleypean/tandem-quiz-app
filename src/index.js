@@ -2,12 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
-import Footer from './components/Footer'
 window.React1 = require('react');
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <Footer />
+
   </React.StrictMode>,
   document.getElementById('root')
 );
