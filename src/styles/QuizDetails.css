@@ -6,6 +6,10 @@ div.quiz div.quiz-details-wrapper {
   overflow: scroll;
 }
 
+div.quiz div.quiz-details-wrapper::-webkit-scrollbar {
+  width: 0px;  
+}
+
 div.quiz-details-wrapper .quiz-details {
   display: flex;
   justify-content: space-between;
@@ -48,6 +52,9 @@ button.next-question:active, button.next-question:hover {
 }
 
 @media screen and (min-width: 500px) {
+  div.quiz div.quiz-details-wrapper {
+    overflow: hidden;
+  }
   div.quiz-details-wrapper h1.score {
     margin: 4% 0;
   }

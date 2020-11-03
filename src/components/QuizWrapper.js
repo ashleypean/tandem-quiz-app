@@ -20,8 +20,8 @@ export default function Quiz() {
         <p className="exit-button link" onClick={confirmLeave}>Exit Quiz</p>
       </nav>
 
-      {/* TODO add instructions modal to show instructions mid-quiz*/}
-      <Modal className="modal"/>
+      {/* TODO add instructions modal to show instructions mid-quiz
+      <Modal className="modal"/>*/}
 
       <QuizDetails />
         

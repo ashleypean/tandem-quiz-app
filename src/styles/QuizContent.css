@@ -7,6 +7,10 @@ div.quiz-content {
   overflow: scroll;
 }
 
+div.quiz-content::-webkit-scrollbar {
+  width: 0px;  
+}
+
 div.quiz-content h3.question {
   margin: 5% 0 5% 0;
 }
@@ -40,6 +44,9 @@ div.selected-style {
 
 
 @media screen and (min-width: 500px) {
+  div.quiz-content { 
+    overflow: hidden;
+  }
   div.answer-choice {
     height: 2.5rem;
   }
