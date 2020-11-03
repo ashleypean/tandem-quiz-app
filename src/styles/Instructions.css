@@ -15,6 +15,11 @@ div.how-to-play {
   overflow: scroll;
 }
 
+/* Remove scrollbar from view */
+div.how-to-play::-webkit-scrollbar {
+    width: 0px;  
+}
+
 div.how-to-play p {
   color: black;
 }
