@@ -6,6 +6,7 @@ import BKey from '../img/b-key.png'
 import CKey from '../img/c-key.png'
 import DKey from '../img/d-key.png'
 import TabKey from '../img/tab-key.png'
+import EnterKey from '../img/enter-key.png'
 
 export default function Instructions(props) {
   
@@ -25,6 +26,8 @@ export default function Instructions(props) {
           <img src={DKey} alt="Keyboard letter D"/>
           <p>OR</p>
           <img src={TabKey} alt="Keyboard key Tab"/>
+          <span>&nbsp; AND &nbsp;</span>
+          <img src={EnterKey} alt="Keybard key Enter"/>
         </div>
       </div>
     </div>

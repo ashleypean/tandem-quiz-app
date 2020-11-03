@@ -24,5 +24,11 @@ div.keyboard {
 div.keyboard img {
   height: 50%;
   width: auto;
+  vertical-align: middle;
 }
 
+@media screen and (min-width: 500px) {
+  div.how-to-play {
+    padding: 5% 15%;
+  }
+}
