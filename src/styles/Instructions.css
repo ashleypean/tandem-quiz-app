@@ -2,9 +2,10 @@ div.instructions {
   background:  #bbbfca ;
   box-shadow: 5px 5px 15px 5px #000000;
   border-radius: 24px;
-  margin: 0% 5% 0 5%;
   height: 80%;
-  width: 90%;
+  width: 80%;
+  max-width: 1150px;
+  margin: 5% 0 0;
 }
 
 div.how-to-play {

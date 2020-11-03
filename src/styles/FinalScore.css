@@ -2,11 +2,10 @@ div.final-score {
   background:  #bbbfca ;
   box-shadow: 5px 5px 15px 5px #000000;
   border-radius: 24px;
-  margin: 0% 5% 0 5%;
-  padding: 5%;
-  height: 65%;
+  height: 80%;
   width: 80%;
-  display: none;
+  max-width: 1150px;
+  margin: 5% 0 0;
 }
 
 div.final-score a.exit {
