@@ -15,7 +15,8 @@ export default function Instructions(props) {
       <Nav />
       <div className="how-to-play">
         <h4>General Instructions</h4>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta vero labore repellat cumque recusandae fugiat saepe libero animi, quam consequatur facere ea illo totam, in nisi non ratione excepturi porro.Totam pariatur hic aliquid saepe expedita deserunt beatae eligendi natus, sed vitae recusandae eaque possimus dolorem sapiente laboriosam, officiis harum ad! Corrupti suscipit porro magni sed dicta. Ipsum, commodi nulla?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta vero labore repellat cumque recusandae fugiat saepe libero animi, quam consequatur facere ea illo totam, in nisi non ratione excepturi porro.Totam pariatur hic aliquid saepe expedita deserunt beatae eligendi natus, sed vitae recusandae eaque possimus dolorem sapiente laboriosam, officiis harum ad! 
+        </p>
         <hr/>
         <h4>Keyboard</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur praesentium, distinctio non sed corrupti vel. Fuga vitae aut, esse quam eius est dicta deserunt suscipit illo corrupti voluptatibus error qui.</p>

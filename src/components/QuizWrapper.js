@@ -7,7 +7,7 @@ export default function Quiz() {
   
   //Prompt user to make sure they would like to exit quiz
   const confirmLeave = e => {
-    const leave = window.confirm('Are you sure you want to leave? If so, your quiz progress will not be stored.')
+    const leave = window.confirm('Are you sure you want to leave? If you do, your quiz progress will not be saved.')
     if(leave)
       window.open('/', '_self')
   }
