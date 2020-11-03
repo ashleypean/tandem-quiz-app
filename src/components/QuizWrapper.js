@@ -15,9 +15,12 @@ export default function Quiz() {
   return (
     <div className="quiz">
       <nav>
-      <p className="exit-button link" onClick={confirmLeave}>Exit Quiz</p>
+        {/* TODO add instructions modal to show instructions mid-quiz*/}
+        
+        <p className="exit-button link" onClick={confirmLeave}>Exit Quiz</p>
       </nav>
 
+      {/* TODO add instructions modal to show instructions mid-quiz*/}
       <Modal className="modal"/>
 
       <QuizDetails />

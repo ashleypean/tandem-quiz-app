@@ -16,20 +16,14 @@ export default function QuizContent(props) {
     answers: ['...', '...', '...', '...']
   }])
 
-  //IIFE that will fetch 10 random questions and add an answer list to it
+  //Fetch 10 random questions and add an answer list to it
   //Value get saved as question list for quiz
-  //FIX THIS LATER, for now it works ¯\_(ツ)_/¯
   useEffect(() => {
     setQuestionList(randomizeAnswers(data))
     
   }, [])
 
-  //Used to get correct answer the first time the component is loaded
-  useEffect(() => {
-
-  }, [])
-
-  //Used to store string value a,b,c,d of correct answer 
+  //Store string value a,b,c,d of correct answer 
   useEffect(() => {
     const alpha = ['A', 'B', 'C', 'D']
     //index of current question in question list 
@@ -59,8 +53,7 @@ export default function QuizContent(props) {
   const setCorrectAnswer = props.setCorrectAnswer
 
 
-
-  //Add background color to show what last selection is when user picks an answer
+  //Add background color to show what last selection is when user clicks on an answer
   const handleClick = e => {
     //If answer choice is already selected, remove styling 
     if(document.querySelector(`div .selected-style`)) {

@@ -24,12 +24,8 @@ div.quiz .link {
   cursor: pointer;
 }
 
-div.quiz-content {
-  border: 1px solid #090979;
-  border-radius: 12px;
-  height: 70%;
-  margin: .5% 10%;
-  padding: 0 5%;
+div.quiz .link:hover {
+  text-decoration: underline overline;
 }
 
 div.modal {
@@ -41,3 +37,6 @@ div.quiz p.next-question {
   margin: 0 13%;
   text-align: right;
 }
+
+
+

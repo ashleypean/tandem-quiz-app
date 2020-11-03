@@ -1,18 +1,22 @@
-div.quiz-details-wrapper {
+/* used to size quiz details parent div*/
+div.quiz div.quiz-details-wrapper {
+  margin: 0 5%;
+  height: 85%;
+  max-height: 600px;
+  overflow: scroll;
+}
+
+div.quiz-details-wrapper .quiz-details {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-end;
   margin: 0 5%;
 }
 
 div.quiz-details-wrapper h1.score {
   text-align: center;
   font-size: 3rem;
-  margin: 1% 0 5%;
-}
-
-div.quiz-details {
-  display: flex;
-  justify-content: space-between;
-  align-content: flex-end;
-  margin: 0 14%;
+  margin: 15% 0 15%;
 }
 
 div.quiz-details p {
@@ -21,17 +25,38 @@ div.quiz-details p {
 }
 
 div.button {
-  margin: 5% 10% 0 0;
+  margin: 5% 0 0;
   display: flex;
   justify-content: flex-end;
 }
 
 button.next-question {
   border: none;
-  width: 15%;
+  width: 25%;
+  max-width: 125px;
   background-color: #1F0B79;
   color: #BBBFCA;
-  padding: 2% 1%;
+  padding:  2% 1%;
   font-size: 90%;
   border-radius: 8px;
+  outline: none;
+}
+
+button.next-question:active, button.next-question:hover {
+  background-color: #120548;
+  color: white;
+}
+
+@media screen and (min-width: 500px) {
+  div.quiz-details-wrapper h1.score {
+    margin: 4% 0;
+  }
+
+  div.button {
+    margin: 3% 0 0;
+  }
+
+  button.next-question {
+    padding: 2% 1%;
+  }
 }

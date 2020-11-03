@@ -76,10 +76,7 @@ export default function QuizDetails() {
       <FinalScore className="final-score" score={score}/>
     )
 
-  return (
-    <div>
-      {questionNumber <= 10? quiz: finalScore}
-    </div>
+  return questionNumber <= 10? quiz: finalScore
 
-  )
+
 }

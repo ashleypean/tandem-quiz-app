@@ -1,24 +1,37 @@
+div.quiz-content {
+  border: 1px solid #090979;
+  border-radius: 12px;
+  height: 55%;
+  margin: .5% 0;
+  padding: 0 5% 5%;
+  overflow: scroll;
+}
+
 div.quiz-content h3.question {
   margin: 5% 0 5% 0;
 }
 
 div.answer-choice {
   display: flex;
-  margin: 0 0 2%;
+  margin: 3% 0;
+  height: 1.8rem;
 }
 
-div.answer-choice h3, div.answer-choice p {
+div.answer-choice h3, div.answer-choice p  {
   margin: 0;
   text-align: left;
+  align-self: center;
 }
 
 div.answer-choice h3 {
-  margin: 0 5% 0; 
+  margin-right: 3%; 
 }
 
 div.answer-choice:hover {
   cursor: pointer;
   font-weight: 800;
+  background-color: #120548;
+  color: white;
 }
 
 div.selected-style {
@@ -26,3 +39,12 @@ div.selected-style {
 }
 
 
+@media screen and (min-width: 500px) {
+  div.answer-choice {
+    height: 2.5rem;
+  }
+  
+  div.answer-choice h3, div.answer-choice p  { 
+    text-align: left;
+  }
+}
