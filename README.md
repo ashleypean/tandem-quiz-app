@@ -43,6 +43,8 @@ Possible Solutions/Considerations: There is likely an issue with the JavaScript 
 
 Where does the Problem Lie: Unsure where the issue may be coming through in the code, but I suggest starting with ```src/components/QuizDetails ``` and ```src/styles/QuizDetails```
 
+*** May need to open an official ticket under Issues to keep track of progress. 
+
 #### 2. Overline/Underline Styling is Inconsistent
 
 Expected Behavior: While hovering over the navigation links, the user should see an underline and overline styling on the active page as well as the link that is being hovered over. 
@@ -89,16 +91,22 @@ What: Currently the user will see their score at all times
 #### 4. ***Instructions Modal***
 What: Currently the user can only remain in the quiz and does not have access to the instructions during the quiz. Adding a link in the nav of the quiz that opens a model with the quiz instructions may prove beneficial for user experience. 
 
-***Change Considerations** 
+***Change Considerations***
 - [ ] React does not currently hold support for modal components so may need to use jQuery UI, or a third-party library to activate the modal component.
 
+#### 5. ***Accessibility Options***
+What: The instructions have options for taking the quiz with only keyboard input (a,b,c,d) or (tab,enter). But the code doesn’t currently support it 
 
+***Change Consideratons***
+- [ ] Create an option for up and down arrows as well
+- [ ] Creat option for a/b/c/d
+- [ ] Create option for tab and enter
+- [ ] ***User controlled option?*** Adding a prompt on the instructions page to allow user to select the keys they would like to correspond with button clicks 
 
+#### 6. Light/Dark Mode
+What: Fairly straightforward. Allow the user to choose between light and dark mode. 
 
-
-
-
-
-
-
+***Change Consideratons***
+- [ ] Add a toggle on header of page that allows user to switch from light and dark mode. Also allow a key press that triggers it for user accessibility  
+- [ ] ***Option*** Creating different themes a user can select through. Current theme also needs a better UI, but I’m not designer y’know ¯\_(ツ)_/¯
 
