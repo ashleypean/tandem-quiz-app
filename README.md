@@ -47,8 +47,13 @@ Where does the Problem Lie: Unsure where the issue may be coming through in the 
 
 Expected Behavior: While hovering over the navigation links, the user should see an underline and overline styling on the active page as well as the link that is being hovered over. 
 
-Issue: While hovering the "Instructions" and "Take a Quiz" navigation items. 
+Issue: While hovering the "Instructions" and "Take a Quiz" navigation items the overline and underline styling is inconsistent. It will work for the middle nav item, but when hovering over the third, the overline either will not activate, or it will activate over the second (incorrect) nav item
 
+Pictures: ***(Coming soon - need to add more Jest testing)***
+
+Possible Solutions/Considerations: Same as the hover issue, it is likely an error with the CSS implementation. May need to consider adding styling with JavaScript to make it more consistent. 
+
+Where does the Problem Lie: Unsure. Checking ```src/components/Navbar ``` and ```src/styles/Navbar ``` should narrow down the search.
 
 ### Upcoming Features
 
